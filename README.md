@@ -1,4 +1,4 @@
-# 🚀 Aero-KV
+#  Aero-KV
 
 Aero-KV is a high-performance, concurrent, in-memory key-value store I built from scratch in Go. 
 
@@ -30,16 +30,16 @@ aero-kv/
 
 ---
 
-## 🧠 Interactive Deep Dive: My Engineering Choices
+## My Choices
 
 <details>
-<summary><b>🔍 Click to expand: Why build a custom LRU from scratch?</b></summary>
+<summary><b> Click to expand: Why build a custom LRU from scratch?</b></summary>
 <br>
 Go's built-in map is fantastic, but it will greedily consume memory until the OS kills the process (OOM panic) under heavy ingestion. By pairing a standard Go map with a doubly-linked list, I can track item recency. When memory hits its limit, the oldest keys are automatically evicted in $O(1)$ time, keeping the footprint highly predictable.
 </details>
 
 <details>
-<summary><b>⚡ Click to expand: Why raw TCP instead of a REST API?</b></summary>
+<summary><b> Click to expand: Why raw TCP instead of a REST API?</b></summary>
 <br>
 HTTP brings a lot of baggage: heavy headers, cookie parsing, and extra text processing. For a key-value store where microseconds matter, raw TCP sockets let me define a minimal byte protocol. The client sends only what is necessary, and the server parses it instantly.
 </details>
@@ -49,6 +49,6 @@ HTTP brings a lot of baggage: heavy headers, cookie parsing, and extra text proc
 ## 🚦 Project Status
 
 *Current Status: **Prototyping Phase** 🛠️*  
-I am currently working unde the project.
+I am currently working unde the project. Almost all parts are built.
 
 ---
