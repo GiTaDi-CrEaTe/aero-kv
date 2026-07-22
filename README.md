@@ -3,6 +3,13 @@
 Aero-KV is a high-performance, concurrent, in-memory key-value store I built from scratch in Go. 
 
 I didn't want to just build another simple wrapper around Go's native map. Instead, I wanted to really get my hands dirty with low-level systems engineering. Aero-KV is my playground for exploring how production-grade databases handle massive concurrency, crash recovery, and memory constraints under heavy loads.
+## ⚡ Quick Start (Embedded Mode)
+
+Aero-KV is designed to be embedded directly into your Go binaries for zero-dependency, sub-microsecond memory access.
+
+### Installation
+
+go get [github.com/GiTaDi-CrEaTe/aero-kv](https://github.com/GiTaDi-CrEaTe/aero-kv)
 
 ---
 
