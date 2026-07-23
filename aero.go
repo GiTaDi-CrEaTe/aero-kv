@@ -2,6 +2,7 @@ package aerokv
 
 import (
 	"github.com/GiTaDi-CrEaTe/aero-kv/core"
+	go 1.22
 )
 
 // DB represents a fully embedded, thread-safe aero-kv instance.
