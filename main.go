@@ -2,7 +2,6 @@ package main
 
 import (
 	"fmt"
-	"time"
 
 	"github.com/GiTaDi-CrEaTe/aero-kv/core"
 	"github.com/GiTaDi-CrEaTe/aero-kv/server"
@@ -10,8 +9,8 @@ import (
 )
 
 func main() {
-	// 1. Boot up the concurrent memory engine
-	db := core.NewStore()
+	// 1. Boot up the concurrent memory engine with an OOM-safe capacity
+	db := core.NewStore(10000)
 
 	// 2. Replay historical data from the WAL (if it exists)
 	wal.Restore("aero.wal", db)
@@ -23,9 +22,6 @@ func main() {
 		panic(err)
 	}
 
-	// 4. Start the Garbage Collector
-	db.StartSweeper(5 * time.Second)
-
-	// 5. Open the TCP gates
+	// 4. Open the TCP gates
 	server.Start("9000", db, logger)
 }
