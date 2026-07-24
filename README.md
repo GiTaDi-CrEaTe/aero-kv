@@ -5,7 +5,7 @@ Aero-KV is a high-performance, concurrent, in-memory key-value store I built fro
 I didn't want to just build another simple wrapper around Go's native map. Instead, I wanted to really get my hands dirty with low-level systems engineering. Aero-KV is my playground for exploring how production-grade databases handle massive concurrency, crash recovery, and memory constraints under heavy loads.
 # ⚡ Aero-KV
 
-[![Aero-KV Core Build](https://github.com/GiTaDi-CrEaTe/aero-kv/actions/workflows/go.yml/badge.svg)](https://github.com/GiTaDi-CrEaTe/aero-kv/actions/workflows/go.yml)
+[![Aero-KV Core Build](https://github.com/GiTaDi-CrEaTe/aero-kv/actions/workflows/go.yml/badge.svg?branch=main)](https://github.com/GiTaDi-CrEaTe/aero-kv/actions/workflows/go.yml)
 
 Aero-KV is a high-performance, concurrent, in-memory key-value store I built from scratch in Go. 
 
